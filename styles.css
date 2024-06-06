@@ -226,6 +226,15 @@ section#hero {
     #hide {
         display: none;
     }
+    .nav_bar {
+        background-color: yellow;
+        height: 70px;
+    }
+    .dropdown_menu {
+        width: 100%;
+        right: 0;
+        top: 70px;
+    }
     
     #toggle_btn .fa-bars {
         display: block; /* Show the toggle button */
