@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Define the animation for the zoom effect */
+@keyframes zoom {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 110%;
+    }
+    100% {
+        background-size: 110%;
+    }
+}
+
+/* Apply the animation to the header */
+header {
+    background-image: url(./images/ayodhya-01.jp.jpg);
+    background-size: cover;
+    height: 700px;
+    animation: zoom 10s; /* Adjust duration and other parameters as needed */
+    animation-play-state: running;
+}
+
+/* Pause the animation after 5 seconds */
+@keyframes pause {
+    0% {
+        animation-play-state: running;
+    }
+    50% {
+        animation-play-state: paused;
+    }
+    100% {
+        animation-play-state: paused;
+    }
+}
+
+header:hover {
+    animation: pause 10s forwards; /* Adjust the duration to match the zoom duration */
+    /* filter: brightness(90%); Adjust brightness to darken on hover */
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 30px;
+    margin-left: 20px; /* Add left margin to prevent the logo from being in the full corner */
+}
+
+.nav_bar {
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_bar a {
+    position: relative;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    padding: 10px 10px;
+}
+
+.nav_bar a:after {
+    content: "";
+    position: absolute;
+    background-color: yellow;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.nav_bar a:hover {
+    color: black;
+}
+
+.nav_bar a:hover:after {
+    width: 100%;
+}
+
+/* Remove hover effect for the logo */
+.nav_bar .logo a:hover {
+    color: white;
+}
+
+.nav_bar .logo a:hover:after {
+    width: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    margin-right: 20px;
+}
+
+li a {
+    text-decoration: none;
+}
+
+/* For button */
+.my-btn-class {
+    background-color: yellow;
+    color: black;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+    transition: scale 0.2 ease;
+}
+
+.my-btn-class:hover {
+    scale: 1.05;
+    background-color: #ffcc00;
+}
+
+.my-btn-class:active {
+    scale: 0.95;
+}
+
+/* For the mobile query bars */
+#toggle_btn .fa-bars {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Hero section */
+section#hero {
+    height: calc(100vh - 300px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+#hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+#guest_house {
+    color: #ffcc00;
+}
+
+/* Dropdown menu */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 90px;
+    width: 300px;
+    height: 0px;
+    background: rgba(247, 255, 7, 0.049);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    overflow: hidden;
+    color: black;
+    text-align: center;
+    z-index: 1000;
+    transition: height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open {
+    height: 378px;
+}
+.dropdown_menu ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+.dropdown_menu li {
+    padding: 15px 0;
+    border-bottom: 1px solid white;
+}
+.dropdown_menu li a{
+    color: black;
+    font-size: 20px;
+}
+
+.button-box {
+    position: absolute;
+    top: calc(100% - 75px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: black;
+    border-radius: 10px;
+    z-index: 10;
+}
+/* Responsive Design */
+@media (max-width: 970px){
+    .nav_bar ul,
+    #hide {
+        display: none;
+    }
+    
+    #toggle_btn .fa-bars {
+        display: block; /* Show the toggle button */
+        margin-left: 10px;
+        margin-right: 30px;
+    }
+    section#hero{
+        height: calc(100vh - 100px);
+    }
+    #hero h1{
+      font-size: 3.5rem;
+    }
+    header {
+        animation: none;
+    }
+    .nav_bar{
+        height: 70px;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+    .button-box {
+        top: calc(100% - -60px); /* Adjust position for smaller screens */
+    }
+    
+}
+@media (max-width: 660px){
+    section#hero{
+        height: calc(100vh - 100px);
+    }
+    #hero h1{
+      font-size: 2rem;
+    }
+    .button-box {
+        width: 80%;
+        height: 120px;
+        top: calc(100% - -60px);
+    }
+}
+
+@media (max-width: 420px){
+    .nav_bar {
+        background-color: yellow;
+        height: 70px;
+    }
+    .dropdown_menu {
+        width: 100%;
+        right: 0;
+        top: 70px;
+    }
+    section#hero {
+        height: calc(100vh - 50px);
+    }
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+    .button-box {
+        width: 90%;
+        height: 100px;
+        top: calc(100% - -60px);
+    }
+}
+@media (max-width: 312px){
+.nav_bar{
+    background-color: yellow;
+    height: 50px;
+}
+.dropdown_menu {
+    width: 100%;
+    right: 0;
+    top: 70px;
+}
+section#hero {
+    height: calc(100vh - 50px);
+}
+#hero h1 {
+    font-size: 0.75rem;
+}
+.button-box {
+    width: 100%;
+    height: 80px;
+    top: calc(100% - -40px); 
+}
+}
+/* ------------About Us Section------------------------------ */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 90px;
+  }
+  
+  /* Column Container Styling */
+  .column-container {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure the columns don't wrap */
+    max-width: 1200px; /* Adjust max-width to your needs */
+    width: 100%; /* Full width of the parent */
+    margin: 0 auto; /* Center the container */
+    /* gap: x; Adds gap between columns */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+  }
+  
+  /* Column Styling */
+  .column-1, .column-2 {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    /* flex-shrink: 0; /* Prevent columns from shrinking */
+  } 
+  
+  .column-1 {
+    max-width: 40%; /* Ensure the image and content are side by side */
+  }
+  
+  .column-2 {
+    max-width: 50%; /* Ensure the image and content are side by side */
+  display: block;
+  unicode-bidi: isolate;
+  }
+  
+  /* Image Styling */
+  .column-1 img {
+    max-width: 100%;
+    height: 100%;
+  }
+  
+  /* About Us Heading Styling */
+  .column-2 h3 {
+    display: flex;
+    align-items: center;
+    font-size: 19px; /* Adjust as needed */
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Optional: makes the text uppercase */
+    color: #797979; /* Optional: sets the color of the About Us heading */
+  }
+  
+  .column-2 .line {
+    flex: 1;
+    height: 4px;
+    width: 10px;
+    background-color: yellow; /* Pink color */
+    margin-left: 10px; /* Space between text and line */
+  }
+  
+  /* Heading Styling */
+  .column-2 h2 {
+    margin-bottom: 20px; /* Add space below the heading */
+    font-size: 30px; /* Adjust as needed */
+    font-weight: 5rem;
+  }
+  
+  /* Paragraph Styling */
+  .column-2 p {
+    margin-bottom: 30px; /* Add space below the paragraph */
+    line-height: 1.6; /* Improve readability */
+    font-size: 18px; /* Adjust as needed */
+  }
+  
+  /* Address Link Styling */
+  .column-2 h4 {
+    margin-bottom: 30px; /* Add space below the address */
+  }
+  
+  .column-2 #maps {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .column-2 #maps:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
+  /* Contact Link Styling */
+  #Contact {
+    margin-bottom: 10%; /* Add space below the contact section */
+  }
+  
+  #Contact a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  #Contact a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+ @media (max-width: 975px){
+    .container{
+        padding-top: 170px
+    }
+    .column-container {
+       max-width: 1900px;
+       height: 90%;
+      }
+ }
+  @media (max-width: 770px) {
+    .column-container {
+      display: block;
+      /* unicode-bidi: isolate; */
+    }
+    .column-1, .column-2 {
+      max-width: 100%; /* Ensure both columns take full width */
+    }
+    .column-1 img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 581px) {
+    .column-container {
+      display: block;
+      text-align: center;
+      align-items: center;
+      /* unicode-bidi: isolate; */
+    }
+    .column-1, .column-2 {
+      max-width: 100%; /* Ensure both columns take full width */
+    }
+  }
+  @media (max-width: 420px){
+    .column-1, .column-2 {
+      max-width: 100%; /* Ensure both columns take full width */
+    }
+  }
+  @media (max-width: 365px){
+    .column-1, .column-2 {
+      max-width: 100%; /* Ensure both columns take full width */
+    }
+  }
+  /* ----------CARD SECTION-------------- */
+  .container-room {
+    display: block;
+    justify-content: center;
+    margin-top: 70px;
+  }
+  
+  .heading-section {
+    text-align: left;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .heading-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-left: 60px;
+  }
+  
+  .heading-section h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    margin-left: 60px;
+    
+  }
+  /* it cause the problem with width of the screen */
+  /* .heading-section h3::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(100% + 1.5rem); 
+    height: 2px;
+    width: 4rem;
+    background-color: var(yellow)
+  } */
+  .card { 
+    background-color: #0c0c0c;
+    color: #fff;
+    max-width: 350px;
+    height: 550px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sec-card {
+    margin-left: -20%;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    align-self: flex-end;
+    margin-top: auto;
+  }
+  
+  .layout-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .image-section {
+    flex: 1;
+  }
+  
+  .image-section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .content-section {
+    flex: 1;
+    padding: 20px;
+  }
+  

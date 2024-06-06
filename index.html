@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+  <title>Kingsukh guest house</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="nav_bar">
+            <div class="logo">
+              <a href="https://wa.link/at5ion">
+                <span>Kingsukh Guest House</span>
+              </a>
+            </div>
+  
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#About">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#Rooms">Rooms</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+  
+            <div>
+              <button type="button" id="hide" idclass=" my-btn-class">Book Now</button>
+            </div>
+            <span id="toggle_btn"><i class="fa-solid fa-bars"></i></span>
+          </div>
+
+          <div class="dropdown_menu">
+            <ul>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#About">About</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#Rooms">Rooms</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                  <li> <button type="button" class="my-btn-class">Book Now</button>
+            </ul>      
+          </div>
+        </nav>
+        
+          <section id="hero">
+            <h1>
+              Make Yourself At Home <br />In Our
+              <span id="guest_house">Guest House</span>
+            </h1>
+          </section>
+          <div class="button-box">
+            <button class="my-btn-class">BOOK NOW</button>
+          </div>
+      </header>
+    <main>
+      <section>
+        <div class="container">
+          <div class="column-container">
+            <div class="column-1">
+              <img src="./images/out.jpg" alt="Your Image Description" />
+            </div>
+            <div class="column-2">
+              <h3>About Us <span class="line"></span></h3>
+              <h2>The Best Holidays Start Here</h2>
+              <p>
+                Embark on a tranquil journey at our Kingsukh Guest House,
+                enveloped by the scenic allure of Biharinath Hill, Baranti Hill,
+                Susunia Hill, Joychandi Hill, Garhpanchkot, Baranti Dam, Maithon
+                Dam, and the captivating Panchat Dam. Revel in the embrace of
+                comfort, relish delightful meals, and unwind in our verdant garden
+                oasis. Your ideal retreat beckons, promising a harmonious blend of
+                nature's beauty and heartfelt hospitality. Explore the hidden gems
+                of Purulia, creating memories that linger long after your stay.
+              </p>
+              <h6>
+                <a
+                  id="maps"
+                  href="https://maps.app.goo.gl/fTkygbNuLaZ5wWvF9"
+                  target="_blank"
+                  >Address: Beside Barshal Water Tank, Manpur, Barhanti, West
+                  Bengal 723156</a
+                >
+              </h6>
+              <div id="Contact">
+                <a href="tel:+919007062180"> Contact us: +91 9007062180 </a>
+              </div>
+              <button class="my-btn-class bottom">BOOK NOW</button>
+            </div>
+          </div>
+        </div>
+        </section>
+    </main>
+<!----------------------------------------------------------------------CARDs SECTION------------------------------------------------------------------------------------ -->
+<section class="container-room">
+  <div class="heading-section">
+    <h3>OUR LIVING ROOM<span class="line"></span></h3>
+    <h2>The Most Memorable Rest <br>Time Starts Here.</h2>
+  </div>
+  <div class="middle container">
+    <!-- 1st card -->
+    <div class="col-md-6 col-lg-6">
+      <div class="card cozy-haven">
+        <img src="./images/room-1.jpg" class="card-img-top" alt="Cozy Haven Room" />
+        <div class="card-body">
+          <h5 class="card-title">Cozy Haven Room</h5>
+          <p class="card-text">
+            Escape to comfort in our Cozy Haven Room, a snug retreat designed for intimate relaxation.
+          </p>
+          <p class="card-text">Starting from Rs. 1000/night</p>
+          <button class="my-btn-class bottom">BOOK NOW</button>
+        </div>
+      </div>
+    </div>
+    <!-- 2nd card -->
+    <div class="col-md-6 col-lg-6">
+      <div class="card sec-card cozy-haven">
+        <img src="./images/room-2.jpg" class="card-img-top" alt="Spacious Serenity Suite" />
+        <div class="card-body">
+          <h5 class="card-title">Spacious Serenity Suite</h5>
+          <p class="card-text">
+            Indulge in luxury and ample space in our Spacious Serenity Suite, where tranquility meets roomy elegance.
+          </p>
+          <p class="card-text">Starting from Rs. 1500/night</p>
+          <button class="my-btn-class bottom">BOOK NOW</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+
+  <script src="./app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>
