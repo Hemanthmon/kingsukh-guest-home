@@ -253,6 +253,15 @@ section#hero {
     
 }
 @media (max-width: 660px){
+    .nav_bar {
+        background-color: yellow;
+        height: 70px;
+    }
+    .dropdown_menu {
+        width: 100%;
+        right: 0;
+        top: 70px;
+    }
     section#hero{
         height: calc(100vh - 100px);
     }
