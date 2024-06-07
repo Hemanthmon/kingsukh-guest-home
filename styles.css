@@ -740,3 +740,33 @@ overflow: hidden;
     margin-left: 10px;
   }
  }
+ .gallery-container {
+  text-align: center;
+}
+
+.img-gallery {
+  display: grid; /* Use CSS Grid layout */
+  grid-auto-flow: dense; /* Fill gaps in the grid layout for compact display */
+  grid-template-columns: repeat(5, 1fr); /* Five equal-width columns */
+  grid-gap: 5px; /* Space between grid items */
+}
+
+.img-gallery .gallery-item {
+  position: relative;
+}
+
+.img-gallery .gallery-item img {
+  width: 100%; /* Make images responsive */
+  height: 100%; /* Ensure images fill the grid area */
+  object-fit: cover; /* Crop images to fit within their containers */
+}
+
+.img-gallery .gallery-item.a {
+  grid-row: span 2;
+}
+
+.img-gallery .gallery-item.b,
+.img-gallery .gallery-item.f,
+.img-gallery .gallery-item.i {
+  grid-column: span 2;
+}
