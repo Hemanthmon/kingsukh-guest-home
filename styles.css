@@ -742,23 +742,45 @@ overflow: hidden;
  }
  .gallery-container {
   text-align: center;
+  height: 100vh;
+  padding: auto;
+  margin-top: 50px;
 }
-
+.title-container {
+display: flex;
+align-items: center;
+}
+.title-container h1{
+  margin: 0 20px;
+  color: yellow;
+  position: relative;
+}
+.title-container h1::after,
+.title-container h1::before {
+  content: "";
+  flex-grow: 1;
+  height: 3px;
+  background-color: yellow;
+ margin: 0 10px;
+}
 .img-gallery {
   display: grid; /* Use CSS Grid layout */
   grid-auto-flow: dense; /* Fill gaps in the grid layout for compact display */
-  grid-template-columns: repeat(5, 1fr); /* Five equal-width columns */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Five equal-width columns */
+  grid-auto-rows: 250px;
   grid-gap: 5px; /* Space between grid items */
 }
 
 .img-gallery .gallery-item {
   position: relative;
+  overflow: hidden;
 }
 
 .img-gallery .gallery-item img {
   width: 100%; /* Make images responsive */
   height: 100%; /* Ensure images fill the grid area */
   object-fit: cover; /* Crop images to fit within their containers */
+  cursor: pointer;
 }
 
 .img-gallery .gallery-item.a {
@@ -769,4 +791,7 @@ overflow: hidden;
 .img-gallery .gallery-item.f,
 .img-gallery .gallery-item.i {
   grid-column: span 2;
+}
+.modal {
+  
 }
