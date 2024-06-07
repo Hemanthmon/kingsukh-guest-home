@@ -467,96 +467,276 @@ section#hero {
     }
   }
   /* ----------CARD SECTION-------------- */
-  .container-room {
-    display: block;
-    justify-content: center;
-    margin-top: 70px;
+  /* General Styles */
+.container-room {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+  padding: 0 20px;
+  height: 100vh; /* Ensure the entire section fits in one screen */
+  /* overflow: hidden; Prevent scrolling */
+}
+
+.heading-section {
+  text-align: left; /* Align text to the left */
+  width: 100%; /* Ensure it spans the full width */
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.heading-section h2,
+.heading-section h3 {
+  margin-left: 60px; /* Left align the text */
+}
+
+.heading-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.heading-section h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.heading-section .line-head {
+  height: 4px;
+  width: 10px;
+  background-color: yellow; /* Pink color */
+  margin-left: 10px; /* Space between text and line */
+}
+
+.middle.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-basis: 45%; /* Adjust the size of the cards */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure the button is at the bottom */
+  text-align: left;
+  background-color: #0c0c0c;
+  color: #fff;
+  width: 100%; /* Ensure both cards have the same width */
+  height: 550px; /* Ensure both cards have the same height */
+  max-width: 350px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card-title {
+  font-size: 1.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.my-btn-class.bottom {
+  align-self: flex-end;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+@media (max-width: 990px){
+  .container-room{
+    margin-top: 100px;
+    height: auto; 
+    padding-bottom: 10px;
+  }
+  .heading-section{
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading-section {
+    margin-bottom: 0px;
+    position: relative;
   }
   
-  .heading-section {
-    text-align: left;
-    margin-bottom: 20px;
-    position: relative;
+  .heading-section h2,
+  .heading-section h3 {
+    margin-left: 10px; /* Left align the text */
   }
   
   .heading-section h2 {
     font-size: 2rem;
-    margin-bottom: 10px;
-    margin-left: 60px;
+    /* margin-bottom: px; */
   }
   
   .heading-section h3 {
     font-size: 1rem;
-    margin-bottom: 10px;
-    margin-left: 60px;
-    
+    margin-top: 10px;
+    margin-bottom: px;
   }
-  /* it cause the problem with width of the screen */
-  /* .heading-section h3::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: calc(100% + 1.5rem); 
-    height: 2px;
-    width: 4rem;
-    background-color: var(yellow)
-  } */
-  .card { 
-    background-color: #0c0c0c;
-    color: #fff;
-    max-width: 350px;
-    height: 550px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  .middle.container {
+    display: block;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .sec-card {
-    margin-left: -20%;
+  .card-container {
+    flex-basis: 100%; /* Cards take full width in column layout */
+    margin-bottom: 50px;
   }
-  
-  .card-body {
-    padding: 1rem;
+  .card {
+    max-width: none; /* Remove max-width to allow full width */
   }
-  
-  .card-title {
-    font-size: 1.9rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .card-text {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-  }
-  
-  .btn {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-    align-self: flex-end;
-    margin-top: auto;
-  }
-  
-  .layout-container {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  
-  .image-section {
-    flex: 1;
-  }
-  
-  .image-section img {
+}
+/* ----------Layout Section--------------- */
+.image-container{
+    background-image: url(./images/layout.jpg);
+    background-size: cover;
+    margin-top: 150px; 
+    background-position: center;
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 550px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.card-container-layout{
+max-width: 2000px !important;
+margin-right: 200px;
+height: 550px;
+background-color: #000;
+box-shadow: #303134;
+border-radius: 4px;
+overflow: hidden;
+}
+.card-container-inner{
+    padding: 16px;
+    height: 400px;
+}
+.card-content{
+    margin: 0;
+    padding: 0;
+    
+}
+.card-content h4{
+  display: flex;
+  align-items: left;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+}
+.card-content h4::after {
+  content: "";
+  flex-grow: 1;
+  height: 3px;
+  background-color: yellow;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding-top:1px;
+}
+
+.card-content h3 {
+    margin: 0 0 80px 0;
+    font-size: 40px;
+    font-weight: bold;
+    color: yellow;
+}
+
+.card-content ul{
+     list-style: none;
+     padding: 0;
+     display: block;
+     flex-wrap: wrap;
+     gap: 16px;
+     margin-left: 20px;
+}
+.card-content li{
+    display: block;
+    align-items: center;
+    margin-bottom: 40px;
+    font-size: 20px;
+    color: #666;
+}
+.icon{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+}
+.card-content li:nth-child(1) .icon {
+    color: #3498db;
+    background-color: #eaf4fb;
   }
   
-  .content-section {
-    flex: 1;
-    padding: 20px;
+  .card-content li:nth-child(2) .icon {
+    color: #e74c3c;
+    background-color: #fdecec;
   }
   
+  .card-content li:nth-child(3) .icon {
+    color: #9b59b6;
+    background-color: #f5eaf7;
+  }
+  
+  .card-content li:nth-child(4) .icon {
+    color: #e67e22;
+    background-color: #fef1e6;
+  }
+ /* statics container */
+ .stats-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center !important;
+    flex-direction: row;
+    width: 80%;
+    max-width: 800px;
+    background-color: black;
+    padding: 20px 40px;
+    margin: 60px auto 0;
+    border: 1px solid whitesmoke;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ .stats-item{
+    text-align: center;
+ }
+ .stats-item h4{
+    font-size: 3rem;
+    font-weight: 4px;
+    color: #f0f0f0;
+ }
+ .stats-item p{
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 8px;
+ }
+ @media (max-width: 645px){
+  .card-container-layout{
+    width: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+ }
