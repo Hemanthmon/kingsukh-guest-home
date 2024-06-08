@@ -792,6 +792,277 @@ align-items: center;
 .img-gallery .gallery-item.i {
   grid-column: span 2;
 }
-.modal {
-  
+/* -------------------------let apply modal here-----------------------------* /
+
+/* ------------------------------------------------------------------------- */
+/* --------------------------contact form---------------------------------------- */
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #303134;
+  border-radius: 8px;
+  box-shadow: #625f5f;
+  justify-content: space-between;
+  overflow: hidden;
+  max-width: 900px;
+  width: 85%;
+  margin: 20px;
+  height: auto;
+}
+
+.contact-info,
+.contact-form {
+  padding: 20px;
+}
+
+.contact-info {
+  background-color: yellow;
+  color: #000 !important;
+  flex: 1 1 300px;
+  text-decoration: none;
+}
+
+.contact-info h2 {
+  margin-bottom: 20px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contact-info ul li span {
+  margin-right: 10px;
+}
+
+.contact-info ul li img {
+  height: 30px;
+  width: 30px;
+}
+
+.contact-info ul li a {
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.social-media {
+  margin-top: 250px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-media a {
+  margin: 0 20px;
+  justify-content: center;
+  font-size: 26px;
+  color: #000;
+}
+
+.contact-form {
+  flex: 2 1 600px;
+  width: 80%;
+}
+
+.contact-form h2 {
+  color: yellow;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  justify-content: space-between;
+}
+
+.input-container,
+.textarea-container {
+  position: relative;
+  flex: 1 1 48%;
+  margin-bottom: 15px;
+}
+
+.input-container label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label {
+  top: -20px;
+  left: 10px;
+  color: yellow;
+  font-size: 15px;
+  font-weight: 30px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+  flex: 1 1 48%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 2px solid white;
+  border-radius: 0px;
+  outline: none;
+  background: none;
+  color: white;
+}
+
+.textarea-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid white;
+  border-radius: 20px;
+  outline: none;
+  background: none;
+  color: white;
+  resize: none;
+  height: 140px;
+}
+
+.textarea-container textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.textarea-container textarea:focus::placeholder,
+.textarea-container textarea:not(:placeholder-shown)::placeholder {
+  color: transparent;
+}
+
+button {
+  background-color: yellow;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkgoldenrod;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    flex: 1 1 100%;
+  }
+}
+
+.form-group textarea {
+  color: white;
+  flex: 1 1 100%;
+  padding: 10px;
+  margin: 5px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 2px solid white;
+  border-radius: 20px;
+  outline: none;
+  background: none;
+  resize: none;
+  height: 140px;
+}
+
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+button {
+  background-color: yellow;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkgoldenrod;
+}
+
+/* footer */
+footer {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 0;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  display: block;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+  min-width: 250px;
+}
+
+.footer-section p,
+.footer-section a {
+  color: #bbb;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.footer-section .socials {
+  display: flex;
+}
+
+.footer-section .socials a {
+  display: inline-block;
+  color: #bbb;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.footer-section .socials a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px;
+}
+
+.footer-bottom p {
+  margin: 10px;
 }

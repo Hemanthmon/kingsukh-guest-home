@@ -17,7 +17,7 @@
     crossorigin="anonymous"
   />
   <!-- AOS CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <title>Kingsukh guest house</title>
   <link rel="stylesheet" href="styles.css" />
@@ -25,7 +25,7 @@
 <body>
     <header>
         <nav>
-          <div class="nav_bar">
+          <div class="nav_bar"  data-aos="slide-down">
             <div class="logo">
               <a href="https://wa.link/at5ion">
                 <span>Kingsukh Guest House</span>
@@ -35,8 +35,9 @@
             <ul>
               <li><a href="#home">Home</a></li>
               <li><a href="#About">About</a></li>
-              <li><a href="#services">Services</a></li>
               <li><a href="#Rooms">Rooms</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="Photos">Gallery</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
   
@@ -50,33 +51,34 @@
             <ul>
                   <li><a href="#home">Home</a></li>
                   <li><a href="#About">About</a></li>
-                  <li><a href="#services">Services</a></li>
                   <li><a href="#Rooms">Rooms</a></li>
+                  <li><a href="#services">Services</a></li>
                   <li><a href="#contact">Contact</a></li>
                   <li> <button type="button" class="my-btn-class">Book Now</button>
             </ul>      
           </div>
         </nav>
         
-          <section id="hero">
+          <section id="hero"  data-aos="fade-up">
             <h1>
               Make Yourself At Home <br />In Our
               <span id="guest_house">Guest House</span>
             </h1>
           </section>
+
           <div class="button-box">
-            <button class="my-btn-class">BOOK NOW</button>
+            <button data-aos="fade-up" class="my-btn-class">BOOK NOW</button>
           </div>
       </header>
     <main>
-      <section>
+      <section id="About">
         <div class="container">
           <div class="column-container">
-            <div class="column-1">
+            <div class="column-1"  data-aos="fade-right" >
               <img src="./images/out.jpg" alt="Your Image Description" />
             </div>
             <div class="column-2">
-              <h3>About Us <span class="line"></span></h3>
+              <h3  data-aos="fade-down">About Us <span class="line"></span></h3>
               <h2>The Best Holidays Start Here</h2>
               <p>
                 Embark on a tranquil journey at our Kingsukh Guest House,
@@ -100,15 +102,15 @@
               <div id="Contact">
                 <a href="tel:+919007062180"> Contact us: +91 9007062180 </a>
               </div>
-              <button class="my-btn-class bottom">BOOK NOW</button>
+              <button data-aos="fade-up" class="my-btn-class bottom">BOOK NOW</button>
             </div>
           </div>
         </div>
         </section>
-    </main>
+
 <!----------------------------------------------------------------------CARDs SECTION------------------------------------------------------------------------------------ -->
-<section class="container-room">
-  <div class="heading-section">
+<section id="Rooms" class="container-room" >
+  <div class="heading-section" data-aos="fade-right">
     <h3>OUR LIVING ROOM<span class="line-head"></span></h3>
     <h2>The Most Memorable Rest <br>Time Starts Here.</h2>
   </div>
@@ -143,33 +145,33 @@
     </div>
   </div>
 </section>
- <!-- To create the layout  -->
- <section class="image-container">
+ <!---------------------------------------Services Section ------------------------------------------------------------------------------------->
+ <section id="Services" class="image-container">
   <div class="card-container-layout">
     <div class="card-container-inner">
 
-      <div class="card-content">
-          <h4>SERVICES<i class="fa-light fa-horizontal-rule"></i></h4>
-        <h3>
+      <div class="card-content" >
+          <h4 data-aos="fade-right">SERVICES<i class="fa-light fa-horizontal-rule"></i></h4>
+        <h3 data-aos="fade-up">
           Strive Only For The</i
           ><br />
           Best
         </h3>
   
         <ul>
-          <li>
-            <span><i class="fa-solid fa-shield-halved icon"></i></span
+          <li data-aos="fade-left">
+            <span><i class="fa-solid fa-shield-halved icon"></i></span 
             >High Class Security
           </li>
-          <li>
+          <li data-aos="fade-left">
             <span><i class="fa-solid fa-bell-concierge icon"></i></span>24
             Hours Room service
           </li>
-          <li>
+          <li data-aos="fade-left">
             <span><i class="fa-solid fa-utensils icon"></i></span
             >Restaurant
           </li>
-          <li>
+          <li data-aos="fade-left">
             <span><i class="fa-solid fa-map-location-dot icon"></i></span
             >Tourist Guide Support
           </li>
@@ -181,61 +183,208 @@
 
 <!-- Banner section -->
 <section class="stats-container d-flex flex-row">
-  <div class="stats-item">
+  <div class="stats-item" data-aos="fade-right">
     <h4><b>100+</b></h4>
     <p>Booking Completed</p>
   </div>
 
-  <div class="stats-item">
+  <div class="stats-item" data-aos="fade-left">
     <h4><b>150+</b></h4>
     <p>Happy customers</p>
   </div>
 </section>
-
-<section>
+<!-- ---------------------------Gallery---------------------------------------------------------------------------------------------- -->
+<section id="Photos">
   <div class="gallery-container">
     <div class="title-container">
-    <h1>Gallery<i class="fa-light fa-horizontal-rule"></i></h1>
+    <h1 data-aos="fade-up">Gallery<i class="fa-light fa-horizontal-rule"></i></h1>
     </div>
-    <div class="img-gallery">
+    <div class="img-gallery" >
       <!-- row -->
-      <div class="gallery-item a">
+      <div class="gallery-item a" data-aos="zoom-in">
         <img src="./images/out.jpg" alt="Outside" />
       </div>
       <!-- column -->
-      <div class="gallery-item b">
+      <div class="gallery-item b" data-aos="zoom-out">
         <img src="./images/ayodhya.webp" alt="Image 2" />
       </div>
       <!-- normal  -->
-      <div class="gallery-item c">
+      <div class="gallery-item c" data-aos="zoom-in-up">
         <img src="./images/room-1.jpg" alt="Image 3" />
       </div>
-      <div class="gallery-item d">
+      <div class="gallery-item d" data-aos="zoom-in">
         <img src="./images/room-2.jpg" alt="Image 4" />
       </div>
-      <div class="gallery-item e">
+      <div class="gallery-item e" data-aos="zoom-in">
         <img src="./images/room-3.jpg" alt="Image 8" />
       </div>
       <!-- column -->
-      <div class="gallery-item f">
+      <div class="gallery-item f" data-aos="zoom-in">
         <img src="./images/lake img.webp" alt="Image 6" />
       </div>
-      <div class="gallery-item g">
+      <div class="gallery-item g" data-aos="zoom-in">
         <img src="./images/palash.webp" alt="Image 5" />
       </div>
-      <div class="gallery-item h">
+      <div class="gallery-item h" data-aos="zoom-in">
         <img src="./images/flower (1).jpg" alt="Image 9" />
       </div>
       <!-- column -->
-      <div class="gallery-item i">
+      <div class="gallery-item i" data-aos="zoom-in">
         <img src="./images/room-4.jpg" alt="Image 7 " />
       </div>
-      <div class="gallery-item j">
+      <div class="gallery-item j" data-aos="zoom-in">
         <img src="./images/mithonDam.webp" alt="dam" />
       </div>
     </div>
   </div>
 </section>
+
+<section id="contact">
+  <div class="center-container">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Contact Info</h2>
+        <ul class="d-flex flex-column">
+          <li>
+            <span><img src="./images/location.png" /></span>
+            <p>
+              <a href="#">Beside Barshal Water tank,<br />Manpur, Barhanti,<br />West Bengal 723156</a>
+            </p>
+          </li>
+          <li>
+            <span><img src="./images/mail.png" /></span>
+            <span>
+              <a href="mailto:kkghosh0099@gmail.com">kkghosh0099@gmail.com</a>
+            </span>
+          </li>
+          <li>
+            <span><img src="./images/call.png" /></span>
+            <span><a href="tel:+919007062180"> +91 9007062180 </a></span>
+          </li>
+        </ul>
+        <div class="social-media">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+      <!-- contact form -->
+      <div class="contact-form">
+        <h2>Send a Message</h2>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="f11a6a7e-654e-4330-b510-ee0c7254c752" />
+          <div class="form-group">
+            <div class="input-container">
+              <input type="text" id="first-name" name="first-name" placeholder="First Name" required />
+              <label for="first-name">First Name</label>
+            </div>
+            <div class="input-container">
+              <input type="text" id="last-name" name="last-name" placeholder="Last Name" required />
+              <label for="last-name">Last Name</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-container">
+              <input type="email" id="email" name="email" placeholder="Email Address" required />
+              <label for="email">Email Address</label>
+            </div>
+            <div class="input-container">
+              <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required />
+              <label for="mobile">Mobile Number</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="textarea-container">
+              <textarea name="message" placeholder="Write your message here...." required></textarea>
+            </div>
+          </div>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="map-section">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3656.5042923747733!2d86.8597371!3d23.5862406!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f6e3fdd3ff9ebb%3A0x517a57e3f93c1807!2sKingsukh%20Guest%20House!5e0!3m2!1sen!2sin!4v1716551918663!5m2!1sen!2sin"
+    width="100%"
+    height="450"
+    style="border: 0"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</section>
+
+</main>
+
+<footer>
+  <!-- column 1 -->
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Kingsukh Guest House</h3>
+      <p>
+        Discover a world of the comfort, luxury, and adventure as you
+        explore our curated selection of hostels, maling every moment of
+        your gateway truly extraodinery
+      </p>
+      <button class="my-btn-class">Book now</button>
+    </div>
+    <!-- column 2 -->
+    <div class="footer-section">
+      <h3>QUICK LINKS</h3>
+      <ul class="d-flex flex-column">
+        <li><a href="#">Browse Destinations</a></li>
+        <li><a href="#">Special Offers & Packages</a></li>
+        <li><a href="#">Room Types & Amenities</a></li>
+        <li><a href="#">Cutomer Review & Ratings </a></li>
+        <li><a href="#">Travel Tips & Guides </a></li>
+      </ul>
+    </div>
+    <!-- column-3 -->
+    <div class="footer-section">
+      <h3>SERVICES</h3>
+      <ul class="d-flex flex-column">
+        <li><a href="#">Concierge Assistance</a></li>
+        <li><a href="#">Flexible Booking Options</a></li>
+        <li><a href="#">Airport Transfers</a></li>
+        <li><a href="#">Wellness and Recreation</a></li>
+      </ul>
+    </div>
+    <!-- column-4 contact us section -->
+    <div class="footer-section contact">
+      <h3>Contact Us</h3>
+      <ul class="d-flex flex-column">
+        <li>
+          <a href="https://maps.app.goo.gl/7wYUEB4tvR7NMHbcA"
+            >Address: Beside Barshal Water Tank, Manpur, Barhanti, West
+            Bengal 723156</a
+          >
+        </li>
+
+        <li>
+          <a href="mailto: kkghosh0099@gmail.com">kkghosh0099@gmail.com</a>
+        </li>
+
+        <li>
+          <a href="tel:+919007062180">+91 9007062180</a>
+        </li>
+      </ul>
+      <div class="social-media d-flex flex-row">
+        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- footer bottom -->
+  <div class="footer-bottom">
+    <p>&copy; 2024 Kingsukh Guest House. All rights reserved.</p>
+  </div>
+</footer>
 
   <script src="./app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -244,5 +393,10 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"
   ></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
