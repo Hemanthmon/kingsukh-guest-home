@@ -88,6 +88,7 @@ header:hover {
     font-size: 20px;
     font-weight: bold;
     margin-right: 30px;
+    color: #000;
     margin-left: 20px; /* Add left margin to prevent the logo from being in the full corner */
 }
 
@@ -306,6 +307,9 @@ section#hero {
         height: 120px;
         top: calc(100% - -60px);
     }
+    .nav_bar .logo{
+      color: black;
+  }
 }
 
 @media (max-width: 420px){
@@ -386,7 +390,8 @@ section#hero {
   .column-2 {
     max-width: 50%; /* Ensure the image and content are side by side */
   display: block;
-  /* unicode-bidi: isolate; */
+  justify-content: space-around;
+  
   }
   
   /* Image Styling */
@@ -422,6 +427,7 @@ section#hero {
   
   /* Paragraph Styling */
   .column-2 p {
+    text-align: left;
   text-transform: capitalize;
     margin-bottom: 30px; /* Add space below the paragraph */
     line-height: 1.6; /* Improve readability */
@@ -444,7 +450,7 @@ section#hero {
   
   /* Contact Link Styling */
   #Contact {
-    margin-bottom: 10%; /* Add space below the contact section */
+    margin-bottom: 30%; /* Add space below the contact section */
   }
   
   #Contact a {
@@ -859,7 +865,7 @@ font-weight: 80px;
 .contact-container {
   display: flex;
   flex-wrap: wrap;
-  background-color: #303134;
+  background-color:  #0c0c0c;
   border-radius: 0.5rem;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
   justify-content: space-between;
@@ -976,7 +982,7 @@ font-weight: 80px;
   border-bottom: 2px solid white;
   border-radius: 0px;
   outline: none;
-  background: none;
+  background:  #0c0c0c;
   color: white;
 }
 
@@ -1021,7 +1027,6 @@ button:hover {
   margin-bottom: 15px;
   border: none;
   border-bottom: 2px solid white;
-  border-radius: 20px;
   outline: none;
   background: none;
   resize: none;
@@ -1049,30 +1054,37 @@ button:hover {
 
 @media(max-width: 1400px){
   .center-container {
-    margin-top: 29rem;
+    margin-top: 15rem;
     width: auto;
     max-width: 100%;
   }
 }
-@media(max-width: 1015px){
-  .center-container {
-    margin-top: 45rem;
- 
-}
 @media(max-width: 1060px){
-  .contact-info {
-    flex: 1 1 18.75rem;
-    /* max-height: 20rem; */
+  .contact-container {
+    flex-wrap: wrap; /* Switches to column layout */
+    width: 90%;
+    margin: 1.25rem auto; /* 20px auto */
+    margin-top: 1rem;
   }
-}
-.contact-container {
-  display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
-  max-width: 56.25rem;
-  width: auto;
-  margin: 1.25rem;
-  height: auto;
+
+  .contact-info,
+  .contact-form {
+    flex: 1 1 50%;
+    max-width: 100%;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+  .form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+  min-height: 0.95rem;
+  width: 90%;
+  padding: 0.625rem;
+  margin-bottom: 0.937rem;
+  outline: none;
+  color: white;
 }
 }
 @media (max-width: 768px) {
@@ -1080,12 +1092,12 @@ button:hover {
     flex-wrap: wrap; /* Switches to column layout */
     width: 90%;
     margin: 1.25rem auto; /* 20px auto */
-    margin-top: 39rem;
+    max-height: auto;
   }
 
   .contact-info,
   .contact-form {
-    flex: 1 1 100%;
+    flex: 1 1 50%;
     max-width: 100%;
   }
 
@@ -1097,6 +1109,50 @@ button:hover {
   .textarea-container {
     flex: 1 1 100%;
   }
+}
+@media (max-width: 674px) {
+  .contact-container {
+    flex-wrap: wrap; /* Switches to column layout */
+    width: 90%;
+  }
+
+  .contact-info,
+  .contact-form {
+    flex: 1 1 50%;
+    max-width: 100%;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+
+  .input-container,
+  .textarea-container {
+    flex: 1 1 100%;
+  }
+  .form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+  min-height: 0.95rem;
+  width: 90%;
+  padding: 0.625rem;
+  margin-bottom: 0.937rem;
+  outline: none;
+  color: white;
+}
+.contact-info ul li {
+
+  margin-bottom: 0.9375rem;
+}
+.social-media {
+  margin-top: 1rem;
+
+}
+.input-container,
+.textarea-container {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
 }
 
 
