@@ -3,7 +3,6 @@ window.addEventListener('load', function() {
     document.querySelector('.loader').style.display = 'none';
 });
 
-// Toggle dropdown menu visibility
 const toggleBtn = document.getElementById('toggle_btn');
 const dropDownMenu = document.querySelector('.dropdown_menu');
 
