@@ -386,7 +386,7 @@ section#hero {
   .column-2 {
     max-width: 50%; /* Ensure the image and content are side by side */
   display: block;
-  unicode-bidi: isolate;
+  /* unicode-bidi: isolate; */
   }
   
   /* Image Styling */
@@ -422,6 +422,7 @@ section#hero {
   
   /* Paragraph Styling */
   .column-2 p {
+  text-transform: capitalize;
     margin-bottom: 30px; /* Add space below the paragraph */
     line-height: 1.6; /* Improve readability */
     font-size: 18px; /* Adjust as needed */
