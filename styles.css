@@ -771,28 +771,47 @@ overflow: hidden;
     color: #ccc;
     margin-top: 8px;
  }
+ /* ---------------------gallery------------------------------ */
  .gallery-container {
   text-align: center;
-  height: 100vh;
   padding: auto;
   margin-top: 50px;
 }
 .title-container {
 display: flex;
 align-items: center;
+justify-content: center;
+text-align: center;
+margin-bottom: 40px;
 }
 .title-container h1{
-  margin: 0 20px;
-  color: yellow;
+font-size: 50px;
+font-weight: 80px;
+  text-align: center;
+  color: white;
   position: relative;
 }
-.title-container h1::after,
-.title-container h1::before {
+.title-container h1::after{
   content: "";
-  flex-grow: 1;
-  height: 3px;
-  background-color: yellow;
- margin: 0 10px;
+  height: 4px;
+  width: 35vw;
+  max-width: auto;
+  background-color: yellow; /* Pink color */
+  margin-left: 10rem; /* Space between text and line */
+  position: absolute;
+  top: 55%;
+  left: 0;
+}
+.title-container h1::before{
+  content: "";
+  height: 4px;
+  width: 35vw;
+  max-width: auto;
+  background-color: yellow; /* Pink color */
+  margin-right: 10rem; /* Space between text and line */
+  position: absolute;
+  top: 55%;
+  right: 0;
 }
 .img-gallery {
   display: grid; /* Use CSS Grid layout */
