@@ -374,10 +374,31 @@ body {
  }
  @media(max-width: 525px){
   .stats-item h4{
-    font-size: 2rem;
+    display: block;
+    align-items: center;
+    font-size: 1.2rem;
     font-weight: 4px;
-    color: #f0f0f0;
  }
+
+ .stats-container {
+  flex-direction: column;
+}
+ }
+@media(max-width: 303px){
+  .stats-item h4{
+    display: block;
+    align-items: c;
+    font-size: 1%;
+    font-weight: 4px;
+ }
+ stats-item p{
+  font-size: 1rem;
+  color: yellow;
+  margin-top: 6px;
+}
+ .stats-container {
+  flex-direction: column;
+}
  }
  /* ---------------------gallery------------------------------ */
  .gallery-container {
