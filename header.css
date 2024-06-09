@@ -1,0 +1,324 @@
+
+@keyframes rotate {
+    100% {
+        transform: rotateY(360deg);
+    }
+  }
+  
+  /* Define the animation for the zoom effect */
+  @keyframes zoom {
+      0% {
+          background-size: 100%;
+      }
+      50% {
+          background-size: 110%;
+      }
+      100% {
+          background-size: 110%;
+      }
+  }
+  
+  /* Apply the animation to the header */
+  header {
+      background-image: url(./images/ayodhya-01.jp.jpg);
+      background-size: cover;
+      height: 100vh;
+      animation: zoom 10s; /* Adjust duration and other parameters as needed */
+      animation-play-state: running;
+  }
+  
+  /* Pause the animation after 5 seconds */
+  @keyframes pause {
+      0% {
+          animation-play-state: running;
+      }
+      50% {
+          animation-play-state: paused;
+      }
+      100% {
+          animation-play-state: paused;
+      }
+  }
+  
+  header:hover {
+      animation: pause 10s forwards; /* Adjust the duration to match the zoom duration */
+  }
+  
+  .logo {
+    font-size: 1.25rem;
+      font-weight: bold;
+      margin-right: 1.875rem;
+      color: yellow;
+      margin-left: 1.25rem;
+  }
+  
+  .nav_bar {
+    position: sticky;
+      height: 10vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .nav_bar.hidden{
+    top: -100px;
+  }
+  .nav_bar a {
+      position: relative;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      font-size: 20px;
+      letter-spacing: 0.5px;
+      padding: 10px 10px;
+  }
+  
+  .nav_bar a:after {
+      content: "";
+      position: absolute;
+      background-color: yellow;
+      height: 3px;
+      width: 0;
+      left: 0;
+      bottom: -10px;
+      transition: 0.3s;
+  }
+  
+  .nav_bar a:hover {
+      color: black;
+  }
+  
+  .nav_bar a:hover:after {
+      width: 100%;
+  }
+  
+  /* Remove hover effect for the logo */
+  .nav_bar .logo a:hover {
+      color: white;
+  }
+  
+  .nav_bar .logo a:hover:after {
+      width: 0;
+  }
+  
+  ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+  }
+  
+  li {
+      margin-right: 20px;
+  }
+  
+  li a {
+      text-decoration: none;
+  }
+  
+  /* For button */
+  .my-btn-class {
+      background-color: yellow;
+      color: black;
+      border: none;
+      outline: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-right: 10px;
+      transition: scale 0.2 ease;
+  }
+  
+  .my-btn-class:hover {
+      scale: 1.05;
+      background-color: #ffcc00;
+  }
+  
+  .my-btn-class:active {
+      scale: 0.95;
+  }
+  
+  /* For the mobile query bars */
+  #toggle_btn .fa-bars {
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: none;
+  }
+  
+  /* Hero section */
+  section#hero {
+      padding:200px 90px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+  }
+  
+  #hero h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+  }
+  
+  #guest_house {
+      color: yellow;
+  }
+  
+  /* Dropdown menu */
+  .dropdown_menu {
+      display: none;
+      position: absolute;
+      right: 2rem;
+      top: 90px;
+      width: 300px;
+      height: 0px;
+      background: rgba(247, 255, 7, 0.049);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      overflow: hidden;
+      color: black;
+      text-align: center;
+      z-index: 1000;
+      transition: height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .dropdown_menu.open {
+      height: 378px;
+  }
+  .dropdown_menu ul{
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+  }
+  .dropdown_menu li {
+      padding: 15px 0;
+      border-bottom: 1px solid white;
+  }
+  .dropdown_menu li a{
+      color: black;
+      font-size: 20px;
+  }
+  
+  .button-box {
+      position: absolute;
+      top: calc(100% - 5px);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 150px;
+      background-color: black;
+      border-radius: 10px;
+      z-index: 10;
+  }
+  /* Responsive Design */
+  @media (max-width: 970px){
+      .nav_bar ul,
+      #hide {
+          display: none;
+      }
+      
+      #toggle_btn .fa-bars {
+          display: block; /* Show the toggle button */
+          margin-left: 10px;
+          margin-right: 30px;
+      }
+      section#hero{
+          height: calc(100vh - 100px);
+      }
+      #hero h1{
+        font-size: 3.5rem;
+      }
+      header {
+          animation: none;
+      }
+      .nav_bar{
+          height: 70px;
+      }
+      .dropdown_menu{
+          display: block;
+      }
+      .button-box {
+          top: calc(100% - -10px); /* Adjust position for smaller screens */
+      }
+  }
+  @media (max-width: 660px){
+      .nav_bar {
+          background-color: yellow;
+          height: 70px;
+          color: #0c0c0c;
+      }
+      .dropdown_menu {
+          width: 100%;
+          right: 0;
+          top: 70px;
+      }
+      section#hero{
+          padding: 60px 20px;
+      }
+      #hero h1{
+        font-size: 2rem;
+      }
+      .button-box {
+          width: 80%;
+          height: 120px;
+          top: calc(100% - -60px);
+      }
+       .logo{
+        color: black;
+    }
+  }
+  
+  @media (max-width: 420px){
+      .nav_bar {
+          background-color: yellow;
+          height: 70px;
+      }
+      .dropdown_menu {
+          width: 100%;
+          right: 0;
+          top: 70px;
+      }
+      section#hero {
+          height: 40px 20px;
+      }
+      #hero h1 {
+          font-size: 2.5rem;
+      }
+      .button-box {
+          width: 90%;
+          height: 100px;
+          top: calc(100% - -60px);
+      }
+      .logo{
+        font-size: 0.965rem;
+        font-weight: 10px;
+    }
+  }
+  @media (max-width: 312px){
+  .nav_bar{
+      background-color: yellow;
+      height: 50px;
+  }
+  .dropdown_menu {
+      width: 100%;
+      right: 0;
+      top: 70px;
+  }
+  section#hero {
+      height: calc(100vh - 50px);
+  }
+  #hero h1 {
+      font-size: 0.75rem;
+  }
+  .button-box {
+      width: 100%;
+      height: 80px;
+      top: calc(100% - -40px); 
+  }
+  }

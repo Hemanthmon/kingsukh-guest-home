@@ -1,0 +1,160 @@
+/* ------------About Us Section------------------------------ */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 90px;
+  }
+  
+  /* Column Container Styling */
+  .column-container {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure the columns don't wrap */
+    max-width: 1200px; /* Adjust max-width to your needs */
+    width: 100%; /* Full width of the parent */
+    margin: 0 auto; /* Center the container */
+    /* gap: x; Adds gap between columns */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+  }
+  
+  /* Column Styling */
+  .column-1, .column-2 {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    /* flex-shrink: 0; /* Prevent columns from shrinking */
+  } 
+  
+  .column-1 {
+    max-width: 40%; /* Ensure the image and content are side by side */
+  }
+  
+  .column-2 {
+    max-width: 50%; /* Ensure the image and content are side by side */
+  display: block;
+  justify-content: space-around;
+  
+  }
+  
+  /* Image Styling */
+  .column-1 img {
+    max-width: 100%;
+    height: 100%;
+  }
+  
+  /* About Us Heading Styling */
+  .column-2 h3 {
+    display: flex;
+    align-items: center;
+    font-size: 19px; /* Adjust as needed */
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Optional: makes the text uppercase */
+    color: #797979; /* Optional: sets the color of the About Us heading */
+  }
+  
+  .column-2 .line {
+    text-align: justify;
+    flex: 1;
+    height: 4px;
+    width: 10px;
+    background-color: yellow; /* Pink color */
+    margin-left: 10px; /* Space between text and line */
+  }
+  
+  /* Heading Styling */
+  .column-2 h2 {
+    margin-bottom: 20px; /* Add space below the heading */
+    font-size: 30px; /* Adjust as needed */
+    font-weight: bold;
+  }
+  
+  /* Paragraph Styling */
+  .column-2 p {
+    text-align: justify;
+    text-transform: capitalize;
+    margin-bottom: 30px; /* Add space below the paragraph */
+    line-height: 1.6; /* Improve readability */
+    font-size: 18px; /* Adjust as needed */
+  }
+  
+  /* Address Link Styling */
+  .column-2 h4 {
+    margin-bottom: 30px; /* Add space below the address */
+  }
+  
+  .column-2 #maps {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .column-2 #maps:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
+  /* Contact Link Styling */
+  #Contact {
+    margin-bottom: 30%; /* Add space below the contact section */
+  }
+  
+  #Contact a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  #Contact a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+ @media (max-width: 975px){
+    .container{
+        padding-top: 170px
+    }
+    .column-container {
+       max-width: 1900px;
+       height: 90%;
+      }
+ }
+  @media (max-width: 770px) {
+    .column-container {
+      display: block;
+      /* unicode-bidi: isolate; */
+    }
+    .column-1, .column-2 {
+      max-width: 100%; /* Ensure both columns take full width */
+    }
+    .column-1 img {
+      max-width: 100%;
+      height: auto;
+    }
+    .column-2 h4 {
+      margin-bottom: 0px; /* Add space below the address */
+    }
+    .column-2 p {
+      text-align: justify;
+      text-transform: capitalize;
+      margin-bottom: 30px; /* Add space below the paragraph */
+      line-height: 1.6; /* Improve readability */
+      font-size: 18px; /* Adjust as needed */
+    }
+  }
+  
+  @media (max-width: 581px) {
+    .column-container {
+      display: block;
+      text-align: center;
+      align-items: center;
+      /* unicode-bidi: isolate; */
+    }
+    .column-1, .column-2 {
+      max-width: 100%; /* Ensure both columns take full width */
+    }
+  }
+  @media (max-width: 420px){
+    .column-1, .column-2 {
+      max-width: 100%; /* Ensure both columns take full width */
+    }
+  }
+  @media (max-width: 365px){
+    .column-1, .column-2 {
+      max-width: 100%; /* Ensure both columns take full width */
+    }
+  }
