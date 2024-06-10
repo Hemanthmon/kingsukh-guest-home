@@ -200,7 +200,7 @@ body {
     
   
   }
- @media(max-width: 506px){
+ @media(max-width: 580px){
   .heading-section h2 {
     font-size: 1.654rem;
     margin-bottom: 0.625rem; /* 10px converted to rem */
@@ -232,7 +232,8 @@ body {
   }
  
  }
- @media(max-width: 385px){
+
+ @media(max-width: 440px){
   .heading-section h2 {
     font-size: 1.356rem;
     margin-bottom: 0.625rem; /* 10px converted to rem */
@@ -256,6 +257,24 @@ body {
     top: 55%;
     left: 0;
   }
+  .card-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 22rem;
+  }
+  .card-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+ }
+ @media(max-width: 400px){
+  
  }
  /*services */
 .image-container {

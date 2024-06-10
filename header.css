@@ -51,14 +51,19 @@
       color: yellow;
       margin-left: 1.25rem;
   }
-  
+ 
+
   .nav_bar {
-   
       width: 100%;
       height: 10vh;
       display: flex;
       justify-content: space-between;
+      position: fixed;
       align-items: center;
+      top: 0; 
+      background-color: rgba(0, 0, 0, 0.5); 
+      align-items: center;
+      z-index: 100;
   }
   .nav_bar.hidden{
     top: -100px;
@@ -72,29 +77,36 @@
       letter-spacing: 0.5px;
       padding: 10px 10px;
   }
-  
-  .nav_bar a:after {
-      content: "";
+ 
+  .nav_bar a.active::after{
+    content: "";
       position: absolute;
       background-color: yellow;
       height: 3px;
-      width: 0;
+      width: 100%;
       left: 0;
       bottom: -10px;
-      transition: 0.3s;
+      transition: width 0.3s ease;
   }
-  
   .nav_bar a:hover {
-      color: black;
+    color: yellow;
+}
+
+.nav_bar a.active::after {
+    width: 100%;
+}
+  
+  .nav_bar a.active:hover {
+      color: yellow;
   }
   
-  .nav_bar a:hover:after {
+  .nav_bar a:hover::after {
       width: 100%;
   }
   
   /* Remove hover effect for the logo */
   .nav_bar .logo a:hover {
-      color: white;
+      color: yellow;
   }
   
   .nav_bar .logo a:hover:after {
@@ -149,7 +161,7 @@
   }
   
   /* Hero section */
-  section#hero {
+  section#home {
       padding:200px 90px;
       display: flex;
       flex-direction: column;
@@ -159,7 +171,7 @@
       color: #fff;
   }
   
-  #hero h1 {
+  #home h1 {
       font-size: 4rem;
       margin-bottom: 1rem;
   }
@@ -171,7 +183,7 @@
   /* Dropdown menu */
   .dropdown_menu {
       display: none;
-      position: absolute;
+      position: fixed;
       right: 2rem;
       top: 90px;
       width: 300px;
@@ -232,7 +244,7 @@
       section#hero{
           height: calc(100vh - 100px);
       }
-      #hero h1{
+      #home h1{
         font-size: 3.5rem;
       }
       header {
@@ -262,7 +274,7 @@
       section#hero{
           padding: 60px 20px;
       }
-      #hero h1{
+      #home h1{
         font-size: 2rem;
       }
       .button-box {
@@ -292,7 +304,7 @@
       section#hero {
           height: 40px 20px;
       }
-      #hero h1 {
+      #home h1 {
           font-size: 2.5rem;
       }
       .button-box {
@@ -318,7 +330,7 @@
   section#hero {
       height: calc(100vh - 50px);
   }
-  #hero h1 {
+  #home h1 {
       font-size: 0.75rem;
   }
   .button-box {
