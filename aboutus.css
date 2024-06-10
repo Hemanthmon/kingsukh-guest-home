@@ -79,7 +79,7 @@
   
   /* Address Link Styling */
   .column-2 h4 {
-    margin-bottom: 30px; /* Add space below the address */
+    margin-bottom: 40px; /* Add space below the address */
   }
   
   .column-2 #maps {
@@ -104,6 +104,9 @@
   #Contact a:hover {
     text-decoration: underline; /* Add underline on hover */
   }
+  #book-now-btn {
+    margin-top: 20px;
+}
  @media (max-width: 975px){
     .container{
         padding-top: 170px
@@ -116,7 +119,6 @@
   @media (max-width: 770px) {
     .column-container {
       display: block;
-      /* unicode-bidi: isolate; */
     }
     .column-1, .column-2 {
       max-width: 100%; /* Ensure both columns take full width */
@@ -126,7 +128,7 @@
       height: auto;
     }
     .column-2 h4 {
-      margin-bottom: 0px; /* Add space below the address */
+      margin-bottom: 30px; /* Add space below the address */
     }
     .column-2 p {
       text-align: justify;
@@ -135,6 +137,7 @@
       line-height: 1.6; /* Improve readability */
       font-size: 18px; /* Adjust as needed */
     }
+    
   }
   
   @media (max-width: 581px) {

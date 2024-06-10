@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <title>Kingsukh guest house</title>
+  <link rel="icon" href="./images/file.png" type="image/x-icon">
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="./header.css"/>
   <link rel="stylesheet" href="aboutus.css"/>
@@ -43,12 +44,13 @@
               <li><a href="#About">About</a></li>
               <li><a href="#Rooms">Rooms</a></li>
               <li><a href="#Services">Services</a></li>
-              <li><a href="Photos">Gallery</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
   
             <div>
+              <a href="https://wa.link/at5ion">
               <button type="button" id="hide" idclass=" my-btn-class">Book Now</button>
+            </a>
             </div>
             <span id="toggle_btn"><i class="fa-solid fa-bars"></i></span>
           </div>
@@ -58,9 +60,9 @@
                   <li data-aos="fade-left"><a href="#home">Home</a></li>
                   <li data-aos="fade-left"><a href="#About">About</a></li>
                   <li data-aos="fade-left"><a href="#Rooms">Rooms</a></li>
-                  <li data-aos="fade-left"><a href="#services">Services</a></li>
+                  <li data-aos="fade-left"><a href="#Services">Services</a></li>
                   <li data-aos="fade-left"><a href="#contact">Contact</a></li>
-                  <li data-aos="fade-left"> <button type="button" class="my-btn-class">Book Now</button>
+                  <li data-aos="fade-left"> <a href="https://wa.link/at5ion"><button type="button" class="my-btn-class">Book Now</button></a></li>
             </ul>      
           </div>
         </nav>
@@ -73,7 +75,7 @@
           </section>
 
           <div class="button-box">
-            <button  class="my-btn-class">BOOK NOW</button>
+            <a href="https://wa.link/at5ion"><button  class="my-btn-class ">BOOK NOW</button></a>
           </div>
       </header>
     <main>
@@ -81,11 +83,11 @@
       <section id="About">
         <div class="container">
           <div class="column-container">
-            <div class="column-1"  data-aos="fade-right" >
+            <div class="column-1"  data-aos="fade-right" data-aos-once="true">
               <img src="./images/out.jpg" alt="Your Image Description" />
             </div>
             <div class="column-2">
-              <h3  data-aos="fade-down">About Us <span class="line"></span></h3>
+              <h3  data-aos="fade-down" data-aos-once="true">About Us <span class="line"></span></h3>
               <h2>The Best Holidays Start Here</h2>
               <p class="text">
                 
@@ -95,14 +97,17 @@
                   id="maps"
                   href="https://maps.app.goo.gl/fTkygbNuLaZ5wWvF9"
                   target="_blank"
+                  data-aos="fade-up" data-aos-delay="1000" data-aos-offset="300"id="book-now-btn" data-aos-once="true" data-aos-duration="2000"
                   >Address: Beside Barshal Water Tank, Manpur, Barhanti, West
                   Bengal 723156</a
                 >
               </h6>
               <div id="Contact">
-                <a href="tel:+919007062180"> Contact us: +91 9007062180 </a>
+                <a href="tel:+919007062180"
+                data-aos="fade-up" data-aos-delay="1000" id="book-now-btn" data-aos-once="true" data-aos-duration="2000"
+                > Contact us: +91 9007062180 </a>
               </div>
-              <button class="my-btn-class">BOOK NOW</button>
+              <a href="https://wa.link/at5ion"><button  data-aos="fade-up" data-aos-delay="1000" data-aos-offset="300"id="book-now-btn" data-aos-once="true"class="my-btn-class" >BOOK NOW</button></a>
             </div>
           </div>
         </div>
@@ -111,12 +116,15 @@
 <!----------------------------------------------------------------------CARDs SECTION------------------------------------------------------------------------------------ -->
 <section id="Rooms" class="container-room" >
   <div class="heading-section" >
-    <h3 data-aos="fade-left" >OUR LIVING ROOM<span class="line-head"></span></h3>
-    <h2>The Most Memorable Rest <br>Time Starts Here.</h2>
+    <h3 data-aos="fade-left"  data-aos-delay="50"
+    data-aos-duration="1000" >OUR LIVING ROOM<span class="line-head"></span></h3>
+    <h2 data-aos="fade-right"  data-aos-delay="100" 
+    data-aos-duration="1000">The Most Memorable Rest <br>Time Starts Here.</h2>
   </div>
   <div class="middle container">
     <!-- 1st card -->
-    <div class="col-md-6 col-lg-6 card-container" data-aos="fade-right">
+    <div class="col-md-6 col-lg-6 card-container" data-aos="fade-right"  data-aos-delay="50"
+    data-aos-duration="500">
       <div class="card cozy-haven">
         <img src="./images/room-1.jpg" class="card-img-top" alt="Cozy Haven Room" />
         <div class="card-body">
@@ -125,12 +133,13 @@
             Escape to comfort in our Cozy Haven Room, a snug retreat designed for intimate relaxation.
           </p>
           <p class="card-text">Starting from Rs. 1000/night</p>
-          <button class="my-btn-class bottom">BOOK NOW</button>
+          <a href="https://wa.link/at5ion"><button class="my-btn-class bottom">BOOK NOW</button></a>
         </div>
       </div>
     </div>
     <!-- 2nd card -->
-    <div class="col-md-6 col-lg-6 card-container" data-aos="fade-left">
+    <div class="col-md-6 col-lg-6 card-container" data-aos="fade-left"  data-aos-delay="100"
+    data-aos-duration="1000">
       <div class="card sec-card cozy-haven">
         <img src="./images/room-2.jpg" class="card-img-top" alt="Spacious Serenity Suite" />
         <div class="card-body">
@@ -139,7 +148,7 @@
             Indulge in luxury and ample space in our Spacious Serenity Suite, where tranquility meets roomy elegance.
           </p>
           <p class="card-text">Starting from Rs. 1500/night</p>
-          <button class="my-btn-class bottom">BOOK NOW</button>
+          <a href="https://wa.link/at5ion"><button id="card-button" class="my-btn-class bottom ">BOOK NOW</button></a>
         </div>
       </div>
     </div>
@@ -152,26 +161,26 @@
 
       <div class="card-content" >
           <h4 data-aos="fade-right">SERVICES<i class="fa-light fa-horizontal-rule"></i></h4>
-        <h3 data-aos="fade-up">
+        <h3 data-aos="fade-up" data-aos-delay="100">
           Strive Only For The</i
           ><br />
           Best
         </h3>
   
         <ul>
-          <li data-aos="fade-left">
+          <li data-aos="fade-left" data-aos-delay="100">
             <span><i class="fa-solid fa-shield-halved icon"></i></span 
             >High Class Security
           </li>
-          <li data-aos="fade-left">
+          <li data-aos="fade-left" data-aos-delay="200">
             <span><i class="fa-solid fa-bell-concierge icon"></i></span>24
             Hours Room service
           </li>
-          <li data-aos="fade-left">
+          <li data-aos="fade-left" data-aos-delay="250">
             <span><i class="fa-solid fa-utensils icon"></i></span
             >Restaurant
           </li>
-          <li data-aos="fade-left">
+          <li data-aos="fade-left" data-aos-delay="350">
             <span><i class="fa-solid fa-map-location-dot icon"></i></span
             >Tourist Guide Support
           </li>
@@ -182,13 +191,13 @@
 </section>
 
 <!-- Banner section -->
-<section class="stats-container d-flex flex-row">
-  <div class="stats-item" data-aos="fade-right">
+<section class="stats-container d-flex flex-row" data-aos="zoom-in">
+  <div class="stats-item" data-aos="fade-left">
     <h4><b>100+</b></h4>
     <p>Booking Completed</p>
   </div>
 
-  <div class="stats-item" data-aos="fade-left">
+  <div class="stats-item" data-aos="fade-right">
     <h4><b>150+</b></h4>
     <p>Happy customers</p>
   </div>
@@ -240,7 +249,7 @@
 </section>
 <!-- ----------------------------Contact Us Form------------------------------------------------------------------------------------ -->
 <section id="contact">
-  <div class="center-container">
+  <div class="center-container" data-aos="zoom-in" data-aos-duration="1100">
     <div class="contact-container">
       <div class="contact-info">
         <h2>Contact Info</h2>
@@ -306,7 +315,7 @@
   </div>
 </section> 
 
-<section class="map-section">
+<section class="map-section" data-aos="zoom-in-up" data-aos-delay="50" data-aos-duration="1000">
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3656.5042923747733!2d86.8597371!3d23.5862406!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f6e3fdd3ff9ebb%3A0x517a57e3f93c1807!2sKingsukh%20Guest%20House!5e0!3m2!1sen!2sin!4v1716551918663!5m2!1sen!2sin"
     width="100%"
@@ -330,7 +339,7 @@
         explore our curated selection of hostels, maling every moment of
         your gateway truly extraodinery
       </p>
-      <button class="my-btn-class">Book now</button>
+      <a href="https://wa.link/at5ion"><button class="my-btn-class">Book now</button></a>
     </div>
     <!-- column 2 -->
     <div class="footer-section">
@@ -376,7 +385,7 @@
         <a href="#" target="_blank"><img src="./images/facebook.png" alt="facebook"></a>
         <a href="#" target="_blank"><img src="./images/instagram.png" alt="instagram"></a>
         <a href="#" target="_blank"><img src="./images/youtube.png" alt="youtube"></a>
-        <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" target="_blank"><span style="color: aliceblue;"><i class="fa-brands fa-x-twitter"></i></i></a>
       </div>
     </div>
   </div>
