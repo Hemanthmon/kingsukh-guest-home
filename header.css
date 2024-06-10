@@ -65,9 +65,7 @@
       align-items: center;
       z-index: 100;
   }
-  .nav_bar.hidden{
-    top: -100px;
-  }
+ 
   .nav_bar a {
       position: relative;
       text-decoration: none;
@@ -76,14 +74,15 @@
       font-size: 20px;
       letter-spacing: 0.5px;
       padding: 10px 10px;
+      transition: color 0.3s ease;
   }
  
-  .nav_bar a.active::after{
+  .nav_bar a::after{
     content: "";
       position: absolute;
       background-color: yellow;
       height: 3px;
-      width: 100%;
+      width: 0%;
       left: 0;
       bottom: -10px;
       transition: width 0.3s ease;
@@ -99,12 +98,7 @@
   .nav_bar a.active:hover {
       color: yellow;
   }
-  
-  .nav_bar a:hover::after {
-      width: 100%;
-  }
-  
-  /* Remove hover effect for the logo */
+
   .nav_bar .logo a:hover {
       color: yellow;
   }
@@ -130,18 +124,19 @@
   
   /* For button */
   .my-btn-class {
-      background-color: yellow;
-      color: black;
-      border: none;
-      outline: none;
-      padding: 10px 20px;
-      border-radius: 20px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      margin-right: 10px;
-      transition: scale 0.2 ease;
+    background-color: yellow;
+    color: black;
+    border: none;
+    outline: none;
+    padding: 0.625rem 1.25rem; /* 10px 20px */
+    border-radius: 1.25rem; /* 20px */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 0.625rem; /* 10px */
+    transition: scale 0.2s ease; /* added 's' for seconds */
   }
+  
   
   .my-btn-class:hover {
       scale: 1.05;
@@ -229,8 +224,27 @@
       border-radius: 10px;
       z-index: 10;
   }
+  /* CSS for fading effect */
+.nav_bar.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
   /* Responsive Design */
-  @media (max-width: 970px){
+  @media(max-width: 1163px){
+    .logo {
+        font-size: 1rem;
+          font-weight: bold;
+          margin-right: 0;
+          margin-left: 1.25rem;
+      }
+      .my-btn-class {
+        padding: 0.7rem 1rem; /* Adjusted padding for larger screens */
+        font-size: 1rem; /* Adjusted font size */
+    }
+      
+  }
+  @media (max-width: 1023px){
       .nav_bar ul,
       #hide {
           display: none;
