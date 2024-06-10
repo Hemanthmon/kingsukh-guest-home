@@ -18,7 +18,7 @@ body {
   overflow: hidden; /* Prevent scrolling while loader is visible */
 }
 
-/* about us */
+
   /* ----------CARD SECTION-------------- */
   /* General Styles */
   .container-room {
@@ -29,29 +29,28 @@ body {
     margin-top: 4.375rem; /* 70px converted to rem */
     padding: 0 1.25rem; /* 20px converted to rem */
     height: 100vh; /* Ensure the entire section fits in one screen */
-    /* overflow: hidden; Prevent scrolling */
   }
   
   .heading-section {
     text-align: left; /* Align text to the left */
-    width: 100%; /* Ensure it spans the full width */
-    margin-bottom: 1.25rem; /* 20px converted to rem */
+    width: 100%; 
+    margin-bottom: 1.25rem; 
     position: relative;
   }
   
   .heading-section h2,
   .heading-section h3 {
-    margin-left: 3.75rem; /* 60px converted to rem */
+    margin-left: 3.75rem; 
   }
   
   .heading-section h2 {
     font-size: 2rem;
-    margin-bottom: 0.625rem; /* 10px converted to rem */
+    margin-bottom: 0.625rem;
   }
   
   .heading-section h3 {
     font-size: 1.3rem;
-    margin-bottom: 0.625rem; /* 10px converted to rem */
+    margin-bottom: 0.625rem; 
     position: relative;
     color:  #797979;;
   }
@@ -61,7 +60,7 @@ body {
     height: 0.25rem; /* 4px converted to rem */
     width: 70vw;
     max-width: auto;
-    background-color: yellow; /* Pink color */
+    background-color: yellow; 
     margin-left: 12.4rem; /* Space between text and line */
     position: absolute;
     top: 55%;
@@ -625,9 +624,7 @@ font-weight: 80px;
       margin-right: 6.5rem; /* Space between text and line */
     }
 }
-/* -------------------------let apply modal here-----------------------------* /
 
-/* ------------------------------------------------------------------------- */
 /* --------------------------contact form---------------------------------------- */
 .center-container {
   display: flex;
